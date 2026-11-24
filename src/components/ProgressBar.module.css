@@ -1,0 +1,61 @@
+.wrapper {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  width: 100%;
+}
+
+.bar {
+  flex: 1 1 auto;
+  appearance: none;
+  -webkit-appearance: none;
+  border: none;
+  width: 100%;
+  border-radius: 999px;
+  overflow: hidden;
+  background: var(--border);
+  color: var(--accent);
+}
+
+.wrapper[data-size='sm'] .bar {
+  height: 6px;
+}
+
+.wrapper[data-size='lg'] .bar {
+  height: 12px;
+}
+
+.bar::-webkit-progress-bar {
+  background: var(--border);
+  border-radius: 999px;
+}
+
+.bar::-webkit-progress-value {
+  background: var(--accent);
+  border-radius: 999px;
+  transition: width 160ms ease-out;
+}
+
+.wrapper[data-complete='true'] .bar::-webkit-progress-value {
+  background: var(--success);
+}
+
+.bar::-moz-progress-bar {
+  background: var(--accent);
+  border-radius: 999px;
+}
+
+.percent {
+  flex: 0 0 auto;
+  min-width: 4ch;
+  text-align: right;
+  font-size: 0.85rem;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  color: var(--text-muted);
+}
+
+.wrapper[data-size='lg'] .percent {
+  font-size: 1.05rem;
+  color: var(--text);
+}

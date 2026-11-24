@@ -1,0 +1,46 @@
+.app {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.body {
+  display: grid;
+  grid-template-columns: 392px minmax(0, 1fr);
+  flex: 1 1 auto;
+  min-height: 0;
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  overflow: hidden;
+  border-right: 1px solid var(--border);
+  background: var(--surface);
+}
+
+.sidebarList {
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  flex: 1 1 auto;
+}
+
+.sidebarFooter {
+  flex: 0 0 auto;
+  padding: 0.6rem 0.75rem;
+  border-top: 1px solid var(--border);
+  background: var(--surface);
+}
+
+.main {
+  min-width: 0;
+  overflow-y: auto;
+}
+
+@media (max-width: 1000px) {
+  .body {
+    grid-template-columns: 340px minmax(0, 1fr);
+  }
+}

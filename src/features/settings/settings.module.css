@@ -1,0 +1,90 @@
+.sections {
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+}
+
+.group {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.groupTitle {
+  padding: 0;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--text-muted);
+}
+
+.groupHint {
+  margin-top: 0.15rem;
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+.options {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  margin-top: 0.5rem;
+}
+
+.toggleOption {
+  margin-top: 0.5rem;
+}
+
+.option,
+.toggleOption {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+  padding: 0.55rem 0.65rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  background: var(--surface);
+  cursor: pointer;
+}
+
+.option:hover,
+.toggleOption:hover {
+  border-color: var(--border-strong);
+}
+
+.option:has(input:checked),
+.toggleOption:has(input:checked) {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 1px var(--accent);
+}
+
+.option:has(input:checked) {
+  background: var(--accent-soft);
+}
+
+.option input,
+.toggleOption input {
+  flex: 0 0 auto;
+  margin-top: 0.15rem;
+  accent-color: var(--accent);
+  cursor: pointer;
+}
+
+.optionCopy {
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+}
+
+.optionLabel {
+  font-size: 0.88rem;
+  font-weight: 600;
+}
+
+.optionHint {
+  font-size: 0.76rem;
+  color: var(--text-muted);
+}
+
+.option:has(input:checked) .optionHint {
+  color: var(--accent-strong);
+}
