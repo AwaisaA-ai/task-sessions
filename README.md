@@ -10,6 +10,8 @@ same sessions can be opened on another device.
 Built from `PLAN.md` (v1, desktop). Stack: Electron + React 18 + TypeScript + Vite, with SQLite via
 the runtime's built-in `node:sqlite` (no native modules to compile).
 
+![Task Sessions app screenshot](docs/app.png)
+
 **Keywords:** local-first task manager, offline todo app, desktop task tracker, Electron React app,
 TypeScript productivity app, SQLite task manager, Supabase sync, real-time progress tracker,
 accessible keyboard-friendly todo list.
